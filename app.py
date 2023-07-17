@@ -5,6 +5,7 @@ from database import hitDB, hitUniqueDB, hitDBProyecto, hitUniqueProject, hitImg
 import base64
 from PIL import Image
 import io
+import os
 
 app = Flask(__name__)
 
@@ -85,10 +86,11 @@ def showProyecto(id):
     proyecto = hitUniqueProject(id)
     img = hitImg(id)
     img = img[0]
-    img = img["img"]
+    # print(img)
+    encoded_image = img["img"]
     # image = Image.open(io.BytesIO(binary_data))
     # print(img)
-    encoded_image = base64.b64encode(img) # type: ignore
+    # encoded_image = base64.b64encode(img) # type: ignore
     encoded_image = encoded_image.decode("utf-8")
     # Convert the bytes into a PIL image
     # image = Image.open(io.BytesIO(encoded_image))
