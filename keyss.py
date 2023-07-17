@@ -1,1 +1,0 @@
-connection_string = "mysql+pymysql://8z36tofywikvnl2uovi3:pscale_pw_VpuhdSJUid50qx7snDh8M97QMKPN1UcpyZiyWrYhOMi@us-east.connect.psdb.cloud/arqui?charset=utf8mb4"
