@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from sqlalchemy import create_engine, text
-from keyss import connection_string
+# from keyss import connection_string
 from database import hitDB, hitUniqueDB, hitDBProyecto, hitUniqueProject, hitImg
 import base64
 from PIL import Image
@@ -8,6 +8,7 @@ import io
 
 app = Flask(__name__)
 
+connection_string = os.environ['connection_string']
 engine = create_engine(connection_string,
                        connect_args={
                             "ssl": {
